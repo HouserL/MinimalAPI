@@ -20,6 +20,8 @@ namespace APILibrary.API
 
         private void IntializeClient()
         {
+            // Need to fix this to get string from appsettings.Json if no
+            // work around was usinig a Web.Config and renaming to App.Config for website
             string api = ConfigurationManager.AppSettings.Get("apiAddress");
             _apiClient = new HttpClient();
             _apiClient.BaseAddress = new Uri(api);
