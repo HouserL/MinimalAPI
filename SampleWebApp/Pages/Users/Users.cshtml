@@ -1,0 +1,13 @@
+﻿@page
+@model SampleWebApp.Pages.UsersModel
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Users Go Here</h1>
+    <hr />
+    <select id="Select1" asp-items="@(new SelectList(Model.Users, "Id", "FirstName"))">
+        <option value = "" selected disabled>-- Select User --</option>
+    </select>
+</div>
